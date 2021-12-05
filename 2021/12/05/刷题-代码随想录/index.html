@@ -24,7 +24,7 @@
 
   
 
-  <title>Leetcode 1 两数之和 | Jane</title>
+  <title>刷题，代码随想录 | Jane</title>
 
   
 
@@ -98,11 +98,11 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">Leetcode 1 两数之和</h1>
+          <h1 class="title-wrap">刷题，代码随想录</h1>
           <h2 class="title-sub-wrap">
             <strong>Jane</strong>
             <span>发布于</span>
-            <time  class="article-date" datetime="2021-11-15T11:28:52.707Z" itemprop="datePublished">2021-11-15</time>
+            <time  class="article-date" datetime="2021-12-05T09:49:40.000Z" itemprop="datePublished">2021-12-05</time>
           </h2>
           <ul class="wrap-list dark">
   
@@ -131,42 +131,21 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <p>C语言：<br>知识点：<br>一、 函数的返回值是一个指针（即地址），称为指针型函数<br>二、 动态内存管理函数 malloc<br>    函数原型：<br>             <code>void* malloc(unsigned int size)</code><br>    作用：用来分配size个字节的存储区，返回一个指向存储区首地址的基类型为void的地址；若没有足够的内存单元供分配，函数返回空（NULL）。<br>    1. 强制类型转换，内存分配的地址在需要存储某种类型的数据时就需要转换成这种类型的指针<br>    2.用sizeof()运算符确定类型所占用的内存空间数<br>    eg:<br>             <code> pi = (int*) malloc(sizeof(int));</code><br>    3.如果内存分配不成功，应给出相应信息，所以一般分配函数使用内存时我们需要加一个判断：<br>    即：     <code> if(pi != NULL) *pi = 6;</code><br>三、动态申请的空间使用完毕之后，使用free(pi);函数释放内存。</p>
-<p>用C语言实现两数之和：</p>
-<ol>
-<li>动态数组形式<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">#include &quot;stdio.h&quot;</span><br><span class="line">#include &quot;stdlib.h&quot;</span><br><span class="line"></span><br><span class="line">/*</span><br><span class="line">    Function:       twoSum                              // 函数名称</span><br><span class="line">    Description:    Two Integer Sum                     // 函数功能</span><br><span class="line">    Input:          *nums: 指向数组的指针</span><br><span class="line">                    numSize: 数组大小</span><br><span class="line">                    target: 指定的两数之和的值</span><br><span class="line">                    *returnSize: 返回值的个数           // 输入参数说明，包括每个参数的作用，取值说明</span><br><span class="line">                                                        // 及参数之间的关系</span><br><span class="line">    Others:         *ret: 指向所申请存储区首地址</span><br><span class="line">                     ret[i]: 可以使用数组的下标表示法来访问连续的空间</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">*/</span><br><span class="line">int *twoSum(int *nums, int numsSize, int target, int *returnSize) &#123;</span><br><span class="line">    int *ret = (int*) malloc(sizeof(int) * 2);                        //（int*）可不用</span><br><span class="line">    int i,j;</span><br><span class="line">    for(i=0; i &lt; numsSize - 1; i++) &#123;</span><br><span class="line">        for(j = 0; j &lt; numsSize; j++) &#123;</span><br><span class="line">            if(nums[i] + nums[j] == target) &#123;</span><br><span class="line">                ret[0] = i;</span><br><span class="line">                ret[1] = j;</span><br><span class="line">                printf(&quot;[%d,%d]\n&quot;,i,j);</span><br><span class="line">                *returnSize = 2;</span><br><span class="line">                return ret;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    *returnSize = 0;</span><br><span class="line">    return NULL;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">    int nums[4] = &#123;2, 7, 11, 15&#125;;</span><br><span class="line">    int returnSize;</span><br><span class="line">    int *s,i;</span><br><span class="line">    s = twoSum(nums, 4, 9, &amp;returnSize);</span><br><span class="line">    for(i = 0; i &lt; 1; ++i)                       // 判断值为1</span><br><span class="line">    printf(&quot;[%d,&quot;,s[i]);</span><br><span class="line">    printf(&quot;%d]\n&quot;,s[i]);</span><br><span class="line">    printf(&quot;%d&quot;,returnSize);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>主函数和子函数对应的两个下标值变量指向同一存储地址从而通过子函数改变地址中的值，主函数中存储下标值变量同时改变，由此可在主函数中输出下标值<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;stdlib.h&gt;</span><br><span class="line"></span><br><span class="line">int twoSum(int *nums, int numsSize, int target,int *i1, int *i2) &#123;</span><br><span class="line">    int i,j;</span><br><span class="line">    for(i = 0; i &lt; numsSize - 1; ++i) &#123;</span><br><span class="line">        for(j = i + 1; j &lt; numsSize; ++j) &#123;</span><br><span class="line">            if(nums[i] + nums[j] == target)&#123;</span><br><span class="line">                *i1 = i;</span><br><span class="line">                *i2 = j;</span><br><span class="line">                return 1;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    int nums[10] = &#123;2,7,11,15&#125;;</span><br><span class="line">    int i1, i2;                                </span><br><span class="line">    if (twoSum(nums, 4, 9, &amp;i1, &amp;i2) == 1) &#123;         </span><br><span class="line">        printf(&quot;[%d,%d]&quot;, i1, i2);</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        printf(&quot;找不到&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-nums 实参传递的是数组，数组是一串连续的存储空间 ，子函数中形参是指针，也就是说指针指向这个数组<br>第一个方法中函数返回的是一个指针（即地址），而在主函数中要读取这个地址中的值，1.在主函数中用一个<br>变量保存这个返回的地址，能保存地址的变量就是指针，即定义一个指针变量等于这个函数的返回值，也就是<br>说这个函数返回的地址和指针指向的地址指向的是同一个地址，这个指针指向的是在子函数中申请空间地址的<br>首地址，首地址后接着还有一个地址也存储了要保存的值，如果要想保存这些被保存的值，可以以动态数组的<br>方式在主函数中将他们打印出来，或者用第二种方式，不用动态申请内存的方法保留这些值，直接在子函数中<br>储存找到的数之和等于目标数的两个数的下标分别保存在两个指针中，在子函数中再定义两个变量来保存返回<br>的两个值，从而在主函数中打印出来</li>
-</ol>
-
+        
       </section>
 
       
       
         <nav class="article-nav">
           
-            <div class="article-nav-item layout-padding">
-  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
-    
-    <div class="card-text">
-      
-        <a href="/2021/12/05/%E5%88%B7%E9%A2%98-%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">刷题，代码随想录</h2>
-        </a>
-      
-      <div class="card-text--row">Newer</div>
-    </div>
-  </article>
-</div>
-          
           
             <div class="article-nav-item layout-padding">
   <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
     
     <div class="card-text">
       
-        <a href="/2021/11/12/hello-world/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">Hello World</h2>
+        <a href="/2021/11/15/Love/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">Leetcode 1 两数之和</h2>
         </a>
       
       <div class="card-text--row">Older</div>
