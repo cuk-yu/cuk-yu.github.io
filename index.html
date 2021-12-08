@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Jane</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="o(*￣▽￣*)ブ">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jane">
+<meta property="og:url" content="https://cuk-yu.github.io/index.html">
+<meta property="og:site_name" content="Jane">
+<meta property="og:description" content="o(*￣▽￣*)ブ">
+<meta property="og:locale">
+<meta property="article:author" content="Jane">
+<meta name="twitter:card" content="summary">
+  
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Jane</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">欢迎来到我的博客空间</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://cuk-yu.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-刷题-代码随想录" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/12/05/%E5%88%B7%E9%A2%98-%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95/" class="article-date">
+  <time datetime="2021-12-05T09:49:40.000Z" itemprop="datePublished">2021-12-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+<div class="article-gallery">
+  <div class="article-gallery-photos">
+    
+      <a class="article-gallery-img fancybox" target="_blank" href="https://qiniu.sukoshi.xyz/src/images/68686407_p0.jpg" rel="gallery_ckwt2dlfa000000veatczf58s noopener">
+        <img src="https://qiniu.sukoshi.xyz/src/images/68686407_p0.jpg" itemprop="image">
+      </a>
+    
+  </div>
+</div>
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/12/05/%E5%88%B7%E9%A2%98-%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95/">刷题，代码随想录</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h1><h2 id="时间复杂度定义"><a href="#时间复杂度定义" class="headerlink" title="时间复杂度定义"></a>时间复杂度定义</h2><h3 id="时间复杂度是一个函数，定性描述该算法的运行时间"><a href="#时间复杂度是一个函数，定性描述该算法的运行时间" class="headerlink" title="时间复杂度是一个函数，定性描述该算法的运行时间"></a>时间复杂度是一个函数，定性描述该算法的运行时间</h3><p>在软件开发中，时间复杂度作用：方便开发者估算出程序运行的答题时间。</p>
+<h4 id="如何估计程序的运行时间："><a href="#如何估计程序的运行时间：" class="headerlink" title="如何估计程序的运行时间："></a>如何估计程序的运行时间：</h4><p>通常会估算算法的操作单元数量来代表程序消耗的时间，这里默认CPU的每个单元运行消耗的时间都是相同的</p>
+<p>假设算法的问题规模为n,那么操作单元数量便用函数f(n)来表示,随着数据规模n的增大，算法执行时间的增长率和f(n)的增长率相同，称为算法的渐进时间复杂度，简称时间复杂度，记为O(f(n)).</p>
+<h2 id="什么是大O"><a href="#什么是大O" class="headerlink" title="什么是大O"></a>什么是大O</h2><h3 id="大O是用来表示上界的"><a href="#大O是用来表示上界的" class="headerlink" title="大O是用来表示上界的"></a>大O是用来表示上界的</h3><p>用它作为算法的最坏情况运行时间的上界，就是对任意数据输入的运行时间的上界</p>
+<h4 id="eg"><a href="#eg" class="headerlink" title="eg:"></a>eg:</h4><p>   插入排序的时间复杂度：O(n²)<br>输入数据的形式对于程序运算时间是有很大影响的，在数据本来有序的情况下时间复杂度是O(n)，但如果数据是逆序的话，插入排序的时间复杂度就是O(n²)，也就是对于所有输入情况来说，最坏是O(n²)的时间复杂度，所以称插入排序的时间复杂度是O(n²)。<br>   快速排序的时间复杂度：O(nlogn)<br>但是当数据已经有序的情况下，快速排序的时间复杂度是O(n²)，严格从O的定义上来讲，快速排序的时间复杂度应该是O（n²）</p>
+<p>但是在业内称快速排序的时间复杂度是O(nlogn),这里的O代表的就是一般情况，而不是严格的上界。如图：<br><img src="https://s2.loli.net/2021/12/06/9xvf2XDpl7B6RJK.png" alt="时间复杂度.PNG"></p>
+<p>主要关心的还是一般情况下的数据形式</p>
+<h5 id="面试中说到算法的时间复杂度是多少值得都是一般情况"><a href="#面试中说到算法的时间复杂度是多少值得都是一般情况" class="headerlink" title="面试中说到算法的时间复杂度是多少值得都是一般情况"></a>面试中说到算法的时间复杂度是多少值得都是一般情况</h5><p>但是如果面试官和我们深入的探讨一个算法的实现以及性能的时候，就要时刻想着</p>
+<h3 id="数据用例的不一样"><a href="#数据用例的不一样" class="headerlink" title="数据用例的不一样"></a>数据用例的不一样</h3><p>时间复杂度也是不同的，这一点一定要注意</p>
+<h1 id="不同数据规模的差异"><a href="#不同数据规模的差异" class="headerlink" title="不同数据规模的差异"></a>不同数据规模的差异</h1><p>如图可以看出不同算法的时间复杂度在不同数据输入规模下的差异<br><img src="https://s2.loli.net/2021/12/07/bBoUDd5jXwHOEa7.png" alt="捕获.PNG"></p>
+<h5 id="O-5n²-和-O-100n-两个时间复杂度，在数据规模为20之前，O-5n²-更优，也就是说随着数据规模的增大，开始最优的时间复杂度，不一定在数据规模增大后也是最优的时间复杂度"><a href="#O-5n²-和-O-100n-两个时间复杂度，在数据规模为20之前，O-5n²-更优，也就是说随着数据规模的增大，开始最优的时间复杂度，不一定在数据规模增大后也是最优的时间复杂度" class="headerlink" title="O(5n²) 和 O(100n) 两个时间复杂度，在数据规模为20之前，O(5n²)更优，也就是说随着数据规模的增大，开始最优的时间复杂度，不一定在数据规模增大后也是最优的时间复杂度"></a>O(5n²) 和 O(100n) 两个时间复杂度，在数据规模为20之前，O(5n²)更优，也就是说随着数据规模的增大，开始最优的时间复杂度，不一定在数据规模增大后也是最优的时间复杂度</h5><p>所以：<br>  在决定使用哪些算法的时候，不是时间复杂度越低的越好（因为简化后的时间复杂度忽略了常数项等等），要考虑数据规模，如果数据规模很小甚至可以用O(n²)的算法比O(n)更合适（在有常数项的时候）。</p>
+<h5 id="为什么在计算时间复杂度的时候要忽略常数项系数呢，也就是说O-100n-就是O-n-的复杂度，O-5n²-就是O-n²-的复杂度，而且要默认O-n-优于O-n²"><a href="#为什么在计算时间复杂度的时候要忽略常数项系数呢，也就是说O-100n-就是O-n-的复杂度，O-5n²-就是O-n²-的复杂度，而且要默认O-n-优于O-n²" class="headerlink" title="为什么在计算时间复杂度的时候要忽略常数项系数呢，也就是说O(100n)就是O(n)的复杂度，O(5n²)就是O(n²)的复杂度，而且要默认O(n)优于O(n²)"></a>为什么在计算时间复杂度的时候要忽略常数项系数呢，也就是说O(100n)就是O(n)的复杂度，O(5n²)就是O(n²)的复杂度，而且要默认O(n)优于O(n²)</h5><p>这就涉及到大O定义了：</p>
+<h5 id="因为大O就是数据量级突破一个点且数据量级非常大的情况下所表现出的时间复杂度，这个数据量也就是常数项系数已经不起决定性作用的数据量"><a href="#因为大O就是数据量级突破一个点且数据量级非常大的情况下所表现出的时间复杂度，这个数据量也就是常数项系数已经不起决定性作用的数据量" class="headerlink" title="因为大O就是数据量级突破一个点且数据量级非常大的情况下所表现出的时间复杂度，这个数据量也就是常数项系数已经不起决定性作用的数据量"></a>因为大O就是数据量级突破一个点且数据量级非常大的情况下所表现出的时间复杂度，这个数据量也就是常数项系数已经不起决定性作用的数据量</h5><p>eg：上图中20的那个点，n只要大于20常数项系数已经不起决定性作用了</p>
+<h3 id="所以常说的时间复杂度都是省略常数项系数的，是因为一般情况下都是默认数据规模足够的大，基于这样的事实，给出的算法时间复杂度的排序如下："><a href="#所以常说的时间复杂度都是省略常数项系数的，是因为一般情况下都是默认数据规模足够的大，基于这样的事实，给出的算法时间复杂度的排序如下：" class="headerlink" title="所以常说的时间复杂度都是省略常数项系数的，是因为一般情况下都是默认数据规模足够的大，基于这样的事实，给出的算法时间复杂度的排序如下："></a>所以常说的时间复杂度都是省略常数项系数的，是因为一般情况下都是默认数据规模足够的大，基于这样的事实，给出的算法时间复杂度的排序如下：</h3><h4 id="O-1-常数阶-lt-O-logn-对数阶-lt-O-n-线性阶-lt-O-n²-平方阶-lt-O-n³-立方阶-lt-O-2-n-指数阶"><a href="#O-1-常数阶-lt-O-logn-对数阶-lt-O-n-线性阶-lt-O-n²-平方阶-lt-O-n³-立方阶-lt-O-2-n-指数阶" class="headerlink" title="O(1)常数阶 &lt; O(logn)对数阶 &lt; O(n)线性阶 &lt; O(n²)平方阶 &lt; O(n³)立方阶 &lt; O(2^n)指数阶"></a>O(1)常数阶 &lt; O(logn)对数阶 &lt; O(n)线性阶 &lt; O(n²)平方阶 &lt; O(n³)立方阶 &lt; O(2^n)指数阶</h4><h6 id="但是也要注意大常数，例如10-7-10-9-那么常数就是不得不考虑的因素了"><a href="#但是也要注意大常数，例如10-7-10-9-那么常数就是不得不考虑的因素了" class="headerlink" title="但是也要注意大常数，例如10^7,10^9,那么常数就是不得不考虑的因素了"></a>但是也要注意大常数，例如10^7,10^9,那么常数就是不得不考虑的因素了</h6><h2 id="复杂表达式的化简"><a href="#复杂表达式的化简" class="headerlink" title="复杂表达式的化简"></a>复杂表达式的化简</h2><p>如何描述算法的时间复杂度是一个复杂表达时算法的时间复杂度<br>eg:<br>    O(2<em>n^2 + 10</em>n + 1000)<br>简化法：<br>1.去掉运行时间中的加法常数项(因为常数项并不会因为n的增大而增加计算机的操做次数)<br>    O(2<em>n^2 + 10</em>n)<br>2.去掉常数系数<br>    O(n^2 + n)<br>3.只保留最高项，去掉数量级小一级的n（因为n²的数据规模远大于n）<br>4.最终简化为：<br>    O(n^2)</p>
+<h2 id="O-logn-中log是以什么为底？"><a href="#O-logn-中log是以什么为底？" class="headerlink" title="O(logn)中log是以什么为底？"></a>O(logn)中log是以什么为底？</h2><p>底可以不同，为10、2、20等</p>
+<h4 id="此处说下忽略底数的描述"><a href="#此处说下忽略底数的描述" class="headerlink" title="此处说下忽略底数的描述"></a>此处说下忽略底数的描述</h4><p><img src="https://s2.loli.net/2021/12/07/OLmH4Gan3vwYpj7.png" alt="捕获.PNG"></p>
+<h5 id="以2为底n的对数-以2为底10的对数-以10为底n的对数"><a href="#以2为底n的对数-以2为底10的对数-以10为底n的对数" class="headerlink" title="以2为底n的对数 = 以2为底10的对数 * 以10为底n的对数"></a>以2为底n的对数 = 以2为底10的对数 * 以10为底n的对数</h5><p>忽略常数项在此处即可描述为忽略底数</p>
+
+    <figure class="figure-image">
+      <img src="https://qiniu.sukoshi.xyz/src/images/68686407_p0.jpg" alt="无言以对" loading="lazy" />
+      <figcaption>无言以对</figcaption>
+    </figure>
+  
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://cuk-yu.github.io/2021/12/05/%E5%88%B7%E9%A2%98-%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95/" data-id="ckwt2dlfa000000veatczf58s" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/" rel="tag">时间复杂度</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Love" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/11/15/Love/" class="article-date">
+  <time datetime="2021-11-15T11:28:52.707Z" itemprop="datePublished">2021-11-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/11/15/Love/">Leetcode 1 两数之和</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>C语言：<br>知识点：<br>一、 函数的返回值是一个指针（即地址），称为指针型函数<br>二、 动态内存管理函数 malloc<br>    函数原型：<br>             <code>void* malloc(unsigned int size)</code><br>    作用：用来分配size个字节的存储区，返回一个指向存储区首地址的基类型为void的地址；若没有足够的内存单元供分配，函数返回空（NULL）。<br>    1. 强制类型转换，内存分配的地址在需要存储某种类型的数据时就需要转换成这种类型的指针<br>    2.用sizeof()运算符确定类型所占用的内存空间数<br>    eg:<br>             <code> pi = (int*) malloc(sizeof(int));</code><br>    3.如果内存分配不成功，应给出相应信息，所以一般分配函数使用内存时我们需要加一个判断：<br>    即：     <code> if(pi != NULL) *pi = 6;</code><br>三、动态申请的空间使用完毕之后，使用free(pi);函数释放内存。</p>
+<p>用C语言实现两数之和：</p>
+<ol>
+<li>动态数组形式<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&quot;stdio.h&quot;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&quot;stdlib.h&quot;</span></span><br><br><span class="hljs-comment">/*</span><br><span class="hljs-comment">    Function:       twoSum                              // 函数名称</span><br><span class="hljs-comment">    Description:    Two Integer Sum                     // 函数功能</span><br><span class="hljs-comment">    Input:          *nums: 指向数组的指针</span><br><span class="hljs-comment">                    numSize: 数组大小</span><br><span class="hljs-comment">                    target: 指定的两数之和的值</span><br><span class="hljs-comment">                    *returnSize: 返回值的个数           // 输入参数说明，包括每个参数的作用，取值说明</span><br><span class="hljs-comment">                                                        // 及参数之间的关系</span><br><span class="hljs-comment">    Others:         *ret: 指向所申请存储区首地址</span><br><span class="hljs-comment">                     ret[i]: 可以使用数组的下标表示法来访问连续的空间</span><br><span class="hljs-comment"></span><br><span class="hljs-comment"></span><br><span class="hljs-comment"></span><br><span class="hljs-comment">*/</span><br><span class="hljs-function"><span class="hljs-keyword">int</span> *<span class="hljs-title">twoSum</span><span class="hljs-params">(<span class="hljs-keyword">int</span> *nums, <span class="hljs-keyword">int</span> numsSize, <span class="hljs-keyword">int</span> target, <span class="hljs-keyword">int</span> *returnSize)</span> </span>&#123;<br>    <span class="hljs-keyword">int</span> *ret = (<span class="hljs-keyword">int</span>*) <span class="hljs-built_in">malloc</span>(<span class="hljs-built_in"><span class="hljs-keyword">sizeof</span></span>(<span class="hljs-keyword">int</span>) * <span class="hljs-number">2</span>);                        <span class="hljs-comment">//（int*）可不用</span><br>    <span class="hljs-keyword">int</span> i,j;<br>    <span class="hljs-keyword">for</span>(i=<span class="hljs-number">0</span>; i &lt; numsSize - <span class="hljs-number">1</span>; i++) &#123;<br>        <span class="hljs-keyword">for</span>(j = <span class="hljs-number">0</span>; j &lt; numsSize; j++) &#123;<br>            <span class="hljs-keyword">if</span>(nums[i] + nums[j] == target) &#123;<br>                ret[<span class="hljs-number">0</span>] = i;<br>                ret[<span class="hljs-number">1</span>] = j;<br>                <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;[%d,%d]\n&quot;</span>,i,j);<br>                *returnSize = <span class="hljs-number">2</span>;<br>                <span class="hljs-keyword">return</span> ret;<br>            &#125;<br><br>        &#125;<br>    &#125;<br>    *returnSize = <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">NULL</span>;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;<br>    <span class="hljs-keyword">int</span> nums[<span class="hljs-number">4</span>] = &#123;<span class="hljs-number">2</span>, <span class="hljs-number">7</span>, <span class="hljs-number">11</span>, <span class="hljs-number">15</span>&#125;;<br>    <span class="hljs-keyword">int</span> returnSize;<br>    <span class="hljs-keyword">int</span> *s,i;<br>    s = <span class="hljs-built_in">twoSum</span>(nums, <span class="hljs-number">4</span>, <span class="hljs-number">9</span>, &amp;returnSize);<br>    <span class="hljs-keyword">for</span>(i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">1</span>; ++i)                       <span class="hljs-comment">// 判断值为1</span><br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;[%d,&quot;</span>,s[i]);<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d]\n&quot;</span>,s[i]);<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d&quot;</span>,returnSize);<br>&#125;<br></code></pre></td></tr></table></figure></li>
+<li>主函数和子函数对应的两个下标值变量指向同一存储地址从而通过子函数改变地址中的值，主函数中存储下标值变量同时改变，由此可在主函数中输出下标值<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdlib.h&gt;</span></span><br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">twoSum</span><span class="hljs-params">(<span class="hljs-keyword">int</span> *nums, <span class="hljs-keyword">int</span> numsSize, <span class="hljs-keyword">int</span> target,<span class="hljs-keyword">int</span> *i1, <span class="hljs-keyword">int</span> *i2)</span> </span>&#123;<br>    <span class="hljs-keyword">int</span> i,j;<br>    <span class="hljs-keyword">for</span>(i = <span class="hljs-number">0</span>; i &lt; numsSize - <span class="hljs-number">1</span>; ++i) &#123;<br>        <span class="hljs-keyword">for</span>(j = i + <span class="hljs-number">1</span>; j &lt; numsSize; ++j) &#123;<br>            <span class="hljs-keyword">if</span>(nums[i] + nums[j] == target)&#123;<br>                *i1 = i;<br>                *i2 = j;<br>                <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;<br>            &#125;<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-keyword">int</span> nums[<span class="hljs-number">10</span>] = &#123;<span class="hljs-number">2</span>,<span class="hljs-number">7</span>,<span class="hljs-number">11</span>,<span class="hljs-number">15</span>&#125;;<br>    <span class="hljs-keyword">int</span> i1, i2;                                <br>    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">twoSum</span>(nums, <span class="hljs-number">4</span>, <span class="hljs-number">9</span>, &amp;i1, &amp;i2) == <span class="hljs-number">1</span>) &#123;         <br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;[%d,%d]&quot;</span>, i1, i2);<br>    &#125; <span class="hljs-keyword">else</span> &#123;<br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;找不到&quot;</span>);<br>    &#125;<br><br><br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+nums 实参传递的是数组，数组是一串连续的存储空间 ， 子函数中形参是指针，也就是说指针指向这个数组<br>第一个方法中函数返回的是一个指针（即地址），而在主函数中要读取这个地址中的值，1.在主函数中用一个<br>变量保存这个返回的地址，能保存地址的变量就是指针，即定义一个指针变量等于这个函数的返回值，也就是<br>说这个函数返回的地址和指针指向的地址指向的是同一个地址，这个指针指向的是在子函数中申请空间地址的<br>首地址，首地址后接着还有一个地址也存储了要保存的值，如果要想保存这些被保存的值，可以以动态数组的<br>方式在主函数中将他们打印出来，或者用第二种方式，不用动态申请内存的方法保留这些值，直接在子函数中<br>储存找到的数之和等于目标数的两个数的下标分别保存在两个指针中，在子函数中再定义两个变量来保存返回<br>的两个值，从而在主函数中打印出来</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://cuk-yu.github.io/2021/11/15/Love/" data-id="ckw0l9264000064vecysob1lc" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/11/12/hello-world/" class="article-date">
+  <time datetime="2021-11-12T02:46:58.047Z" itemprop="datePublished">2021-11-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/11/12/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://cuk-yu.github.io/2021/11/12/hello-world/" data-id="ckvz9x2le00006kve1kym01ze" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+</section>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 Jane<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
