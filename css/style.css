@@ -196,6 +196,10 @@ html {
 body {
   font-size: var(--font-base-size);
   line-height: var(--font-base-lh);
+  cursor: url("/mouse/Arrow.cur"), default;
+}
+a:hover {
+  cursor: url("/mouse/Hand.cur"), pointer;
 }
 *,
 *:before,

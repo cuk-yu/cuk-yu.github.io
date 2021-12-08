@@ -1,101 +1,217 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#3367D6"/>
+  <link rel="apple-touch-icon" href="/icons-192.png">
+  <link rel="manifest" href="/manifest.json">
+
+  <meta name="generator" content="Hexo 5.4.0">
+
+  
+    <meta name="description" content="o(*￣▽￣*)ブ">
   
 
   
+
+  
+    <meta name="author" content="Jane">
+  
+
+  
+
+  
+
   <title>刷题，代码随想录 | Jane</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="时间复杂度时间复杂度定义时间复杂度是一个函数，定性描述该算法的运行时间在软件开发中，时间复杂度作用：方便开发者估算出程序运行的答题时间。 如何估计程序的运行时间：通常会估算算法的操作单元数量来代表程序消耗的时间，这里默认CPU的每个单元运行消耗的时间都是相同的 假设算法的问题规模为n,那么操作单元数量便用函数f(n)来表示,随着数据规模n的增大，算法执行时间的增长率和f(n)的增长率相同，称为算法">
-<meta property="og:type" content="article">
-<meta property="og:title" content="刷题，代码随想录">
-<meta property="og:url" content="https://cuk-yu.github.io/2021/12/05/%E5%88%B7%E9%A2%98-%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95/index.html">
-<meta property="og:site_name" content="Jane">
-<meta property="og:description" content="时间复杂度时间复杂度定义时间复杂度是一个函数，定性描述该算法的运行时间在软件开发中，时间复杂度作用：方便开发者估算出程序运行的答题时间。 如何估计程序的运行时间：通常会估算算法的操作单元数量来代表程序消耗的时间，这里默认CPU的每个单元运行消耗的时间都是相同的 假设算法的问题规模为n,那么操作单元数量便用函数f(n)来表示,随着数据规模n的增大，算法执行时间的增长率和f(n)的增长率相同，称为算法">
-<meta property="og:locale">
-<meta property="og:image" content="https://qiniu.sukoshi.xyz/src/images/68686407_p0.jpg">
-<meta property="article:published_time" content="2021-12-05T09:49:40.000Z">
-<meta property="article:modified_time" content="2021-12-07T15:28:20.071Z">
-<meta property="article:author" content="Jane">
-<meta property="article:tag" content="时间复杂度">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://qiniu.sukoshi.xyz/src/images/68686407_p0.jpg">
+
   
+
   
+    <link rel="shortcut icon" href="/favicon.ico">
   
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+
   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@1.1.3/index.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs@9.16.2/styles/monokai.css">
+  
+
+  <!-- 雪花特效 -->
+   
+    <script type="text/javascript" src="/js/sakura.js"></script>
+  
+
   
 <link rel="stylesheet" href="/css/style.css">
 
-<meta name="generator" content="Hexo 5.4.0"></head>
-
+</head>
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Jane</a>
-      </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">欢迎来到我的博客空间</a>
-        </h2>
-      
+  <div class="root-container">
+    
+<!-- header container -->
+<header class="header-container post">
+  
+    <div class="post-image" style="background-image: url(/background.jpg)"></div>
+  
+
+  <!-- navbar -->
+<nav class="navbar">
+  <div class="navbar-content">
+    <!-- logo -->
+    <div class="navbar-logo">
+      <a href="/">
+        
+            Jane
+              
+      </a>
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
+
+    <!-- link -->
+    <div class="navbar-link">
+      <div class="navbar-btn">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <ul class="navbar-list">
         
-      </nav>
-      <nav id="sub-nav">
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://cuk-yu.github.io"></form>
+          <li class="navbar-list-item"><a href="/">
+              📁首页
+            </a></li>
+          
+          <li class="navbar-list-item"><a href="/">
+              🔖标签
+            </a></li>
+          
+          <li class="navbar-list-item"><a href="/books">
+              📚书库
+            </a></li>
+          
+          <li class="navbar-list-item"><a href="/timeline">
+              ⏳时间线
+            </a></li>
+          
+        <!-- 
+          <li><a href="/">
+              <div>
+                📁首页
+              </div>
+            </a>
+            
+
+          </li>
+          
+          <li><a href="/">
+              <div>
+                🔖标签
+              </div>
+            </a>
+            
+
+          </li>
+          
+          <li><a href="/books">
+              <div>
+                📚书库
+              </div>
+            </a>
+            
+
+          </li>
+          
+          <li><a href="/timeline">
+              <div>
+                ⏳时间线
+              </div>
+            </a>
+            
+
+          </li>
+           -->
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    <div class="header-content">
+      <div class="post-text layout-block">
+        <div class="layout-margin">
+          <h1 class="title-wrap">刷题，代码随想录</h1>
+          <h2 class="title-sub-wrap">
+            <strong>Jane</strong>
+            <span>发布于</span>
+            <time  class="article-date" datetime="2021-12-05T09:49:40.000Z" itemprop="datePublished">2021-12-05</time> 
+          </h2>
+
+          <ul class="wrap-list dark">
+  
+</ul>
+          <ul class="wrap-list dark">
+  
+    <li><a href="/tags/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/">🏷️ 时间复杂度</a></li>
+  
+</ul>
+        </div>
       </div>
     </div>
-  </div>
+  
+
+  
+  
+  
+  
 </header>
-      <div class="outer">
-        <section id="main"><article id="post-刷题-代码随想录" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/12/05/%E5%88%B7%E9%A2%98-%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95/" class="article-date">
-  <time datetime="2021-12-05T09:49:40.000Z" itemprop="datePublished">2021-12-05</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-<div class="article-gallery">
-  <div class="article-gallery-photos">
-    
-      <a class="article-gallery-img fancybox" target="_blank" href="https://qiniu.sukoshi.xyz/src/images/68686407_p0.jpg" rel="gallery_ckwt2dlfa000000veatczf58s noopener">
-        <img src="https://qiniu.sukoshi.xyz/src/images/68686407_p0.jpg" itemprop="image">
-      </a>
-    
-  </div>
-</div>
 
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      刷题，代码随想录
-    </h1>
-  
+    <!-- 文章 -->
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+<!-- 代码语言 -->
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+<!-- 代码块复制 -->
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/clipboard.min.js"></script>
+<!-- 代码块收缩 -->
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script> 
+<!-- 代码块折行 -->
+<style type="text/css">code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }</style>
+
+<!-- 文章内容 -->
+<div class="body-container">
+  <article class="content-container layout-block post-container">
+    <div class="article-info">
       
-        <h1 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h1><h2 id="时间复杂度定义"><a href="#时间复杂度定义" class="headerlink" title="时间复杂度定义"></a>时间复杂度定义</h2><h3 id="时间复杂度是一个函数，定性描述该算法的运行时间"><a href="#时间复杂度是一个函数，定性描述该算法的运行时间" class="headerlink" title="时间复杂度是一个函数，定性描述该算法的运行时间"></a>时间复杂度是一个函数，定性描述该算法的运行时间</h3><p>在软件开发中，时间复杂度作用：方便开发者估算出程序运行的答题时间。</p>
+        
+          <section
+            class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
+            
+              <p>
+                <a href="https://qiniu.sukoshi.xyz/src/images/68686407_p0.jpg" target="_blank">
+                  <img src="https://qiniu.sukoshi.xyz/src/images/68686407_p0.jpg" itemprop="image" loading="lazy" />
+                </a>
+              </p>
+              
+          </section>
+          
+
+            
+              <section
+                class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
+                <h1 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h1><h2 id="时间复杂度定义"><a href="#时间复杂度定义" class="headerlink" title="时间复杂度定义"></a>时间复杂度定义</h2><h3 id="时间复杂度是一个函数，定性描述该算法的运行时间"><a href="#时间复杂度是一个函数，定性描述该算法的运行时间" class="headerlink" title="时间复杂度是一个函数，定性描述该算法的运行时间"></a>时间复杂度是一个函数，定性描述该算法的运行时间</h3><p>在软件开发中，时间复杂度作用：方便开发者估算出程序运行的答题时间。</p>
 <h4 id="如何估计程序的运行时间："><a href="#如何估计程序的运行时间：" class="headerlink" title="如何估计程序的运行时间："></a>如何估计程序的运行时间：</h4><p>通常会估算算法的操作单元数量来代表程序消耗的时间，这里默认CPU的每个单元运行消耗的时间都是相同的</p>
 <p>假设算法的问题规模为n,那么操作单元数量便用函数f(n)来表示,随着数据规模n的增大，算法执行时间的增长率和f(n)的增长率相同，称为算法的渐进时间复杂度，简称时间复杂度，记为O(f(n)).</p>
 <h2 id="什么是大O"><a href="#什么是大O" class="headerlink" title="什么是大O"></a>什么是大O</h2><h3 id="大O是用来表示上界的"><a href="#大O是用来表示上界的" class="headerlink" title="大O是用来表示上界的"></a>大O是用来表示上界的</h3><p>用它作为算法的最坏情况运行时间的上界，就是对任意数据输入的运行时间的上界</p>
@@ -118,59 +234,277 @@
       <figcaption>无言以对</figcaption>
     </figure>
   
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://cuk-yu.github.io/2021/12/05/%E5%88%B7%E9%A2%98-%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95/" data-id="ckwt2dlfa000000veatczf58s" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/" rel="tag">时间复杂度</a></li></ul>
+                <div style="text-align:center;color: #ccc;font-size:16px;">
+                  -------本章节到此结束 <svg t="1630547352435" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4553" width="18" height="18"><path d="M920.5 332.2c-22.6-53.4-55-101.5-96.2-142.7s-89.2-73.6-142.7-96.2C626.2 69.9 567.5 58 506.8 58 446.2 58 387.4 69.9 332 93.3c-53.4 22.6-101.5 54.9-142.7 96.2-41.2 41.2-73.6 89.2-96.2 142.7C69.9 387.6 58 446.4 58 507s11.9 119.4 35.3 174.8c22.6 53.4 54.9 101.5 96.2 142.7 41.2 41.2 89.2 73.6 142.7 96.2C387.6 944.1 446.3 956 507 956c60.6 0 119.4-11.9 174.8-35.3 53.4-22.6 101.5-55 142.7-96.2s73.6-89.2 96.2-142.7C944.1 626.4 956 567.7 956 507s-12.1-119.4-35.5-174.8zM506.9 891.1c-211.8 0-384.1-172.3-384.1-384.1s172.3-384.1 384.1-384.1S891 295.2 891 507 718.7 891.1 506.9 891.1z" p-id="4554" fill="#1296db"></path><path d="M614.3 588c-12 0-22.9 6.8-28.3 17.6-14.6 29.3-44.8 49.4-79.7 49.4s-65.2-20.1-79.7-49.4c-5.3-10.7-16.3-17.6-28.3-17.6-23.3 0-38.6 24.5-28.3 45.4 24.8 50.2 76.5 84.6 136.3 84.6s111.5-34.5 136.3-84.6c10.4-20.9-5-45.4-28.3-45.4zM765.6 420.5h-76.1l55-55c10.2-10.2 10.2-26.8 0-37l-4-4c-10.2-10.2-26.8-10.2-37 0l-99 99c-8.3 4.4-14 13.1-14 23.2v5.6c0 14.5 11.7 26.2 26.2 26.2h148.9c14.5 0 26.2-11.7 26.2-26.2v-5.6c0-14.5-11.7-26.2-26.2-26.2zM246.7 420.5h76.1l-55-55c-10.2-10.2-10.2-26.8 0-37l4-4c10.2-10.2 26.8-10.2 37 0l99 99c8.3 4.4 14 13.1 14 23.2v5.6c0 14.5-11.7 26.2-26.2 26.2h-3.9-145c-14.5 0-26.2-11.7-26.2-26.2v-5.6c0-14.5 11.7-26.2 26.2-26.2z" p-id="4555" fill="#1296db"></path></svg> 感谢您的阅读-------
+                </div>
+              </section>
 
-    </footer>
-  </div>
-  
+              
+                
+                  <nav class="article-nav">
+                    
+                          
+                            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
     
-<nav id="article-nav">
-  
-  
-    <a href="/2021/11/15/Love/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Leetcode 1 两数之和</div>
-    </a>
-  
-</nav>
-
-  
-</article>
-
-</section>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2021 Jane<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    <div class="card-text">
+      
+        <a href="/2021/11/15/Love/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">Leetcode 1 两数之和</h2>
+        </a>
+      
+      <div class="card-text--row">Older</div>
     </div>
+  </article>
+</div>
+                              
+                  </nav>
+                  
+
+                    <section class="page-message-container layout-padding">
+                      
+
+
+  
+  
+    <div class="valine-container comments-container content-padding--primary soft-size--large soft-style--box">
+      <div id="valine_thread" class="valine-thread"></div>
+    </div>
+    <script type="text/javascript" src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script type="text/javascript" src='//unpkg.com/valine/dist/Valine.min.js'></script>
+    <script type="text/javascript">
+      new Valine({
+        el: "#valine_thread",
+        appId: "valine的appId",
+        appKey: "valine的appKey",
+        avatar: "lxfy",
+        placeholder: "看都看到这了，想想有没有什么要留下的呀～",
+        notify: true,
+        visitor: true,
+        pageSize: 10,
+      });
+    </script>
+  
+
+  
+  
+
+
+                    </section>
+    </div>
+    <div class="widget-info">
+      <section class="widget-author widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-body">
+    
+      <img src="/avatar.jpg" class="soft-size--round soft-style--box" alt="鹿心肺语">
+    
+    
+      <h2>鹿心肺语</h2>
+    
+    
+      <p>不断努力探索的程序员</p>
+    
+
+    <div class="count-box">
+      <div class="count-box--item">
+        <svg class="icon icon-article" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M240.51564747 647.74217627h196.07203239c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806V165.10332731c0-33.18142087-30.16492806-60.32985613-60.32985612-60.32985611H245.04038668C225.43318342 104.7734712 210.35071939 119.85593522 210.35071939 139.46313845V617.57724821c0 16.59071043 13.57421762 30.16492806 30.16492808 30.16492806z m663.62841731-452.47392089v482.63884894c0 33.18142087-27.14843525 60.32985613-60.32985612 60.32985613H180.18579134c-33.18142087 0-60.32985613-27.14843525-60.32985612-60.32985613V195.26825538c-49.77213131 0-90.49478418 40.72265287-90.49478417 90.49478417v452.4739209c0 49.77213131 40.72265287 90.49478418 90.49478417 90.49478417h286.56681657c16.59071043 0 30.16492806 13.57421762 30.16492807 30.16492807s13.57421762 30.16492806 30.16492805 30.16492806h90.49478418c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806s13.57421762-30.16492806 30.16492807-30.16492807h286.56681657c49.77213131 0 90.49478418-40.72265287 90.49478417-90.49478417V285.76303955c0-49.77213131-40.72265287-90.49478418-90.49478417-90.49478417zM587.41232014 647.74217627h191.54729318c19.60720323 0 34.68966726-15.08246403 34.68966729-34.68966727V134.93839925c0-16.59071043-13.57421762-30.16492806-30.16492808-30.16492805H617.57724821c-30.16492806 0-60.32985613 27.14843525-60.32985612 60.32985611v452.4739209c0 16.59071043 13.57421762 30.16492806 30.16492805 30.16492806z" fill="currentColor"></path>
+</svg>
+        <span>3</span>
+      </div>
+      <div class="count-box--item">
+        <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M900.3614811 257.09082106h-339.81629553l-67.96326003-101.9448889c-19.41807444-29.12711113-48.54518557-43.69066667-82.52681443-43.69066667H123.6385189c-53.39970333 0-97.09036999 43.69066667-97.09037113 97.09036999v582.54222222c0 53.39970333 43.69066667 97.09036999 97.09037113 97.09037002h776.7229622c53.39970333 0 97.09036999-43.69066667 97.09037113-97.09037002V354.18119104c0-53.39970333-43.69066667-97.09036999-97.09037113-97.09036998z m-97.09036999 242.72592554H220.72888889c-24.27259221 0-48.54518557-24.27259221-48.54518556-48.54518556s24.27259221-48.54518557 48.54518556-48.54518444h582.54222222c24.27259221 0 48.54518557 24.27259221 48.54518556 48.54518444s-24.27259221 48.54518557-48.54518556 48.54518556z" fill="currentColor"></path>
+</svg>
+        0
+      </div>
+      <div class="count-box--item">
+        <svg class="icon icon-tags" viewBox="0 0 1098 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M283.42180005 272q0-28.38857157-20.09142843-48.48000001t-48.47999998-20.09142842-48.48000002 20.09142842-20.09142846 48.48000001 20.09142846 48.48 48.48000002 20.09142843 48.47999998-20.09142843 20.09142843-48.48zM855.0332285 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.03999997 263.58857157q-20.9142853 19.81714313-48.75428534 19.81714312-28.38857157 0-48.20571468-19.81714312l-383.04-383.58857157q-20.36571468-19.81714313-34.55999999-54.10285688t-14.19428534-62.6742853l0-222.85714313q0-27.84000002 20.36571469-48.20571469t48.2057147-20.36571466l222.85714313 0q28.38857157 0 62.6742853 14.19428529t54.65142842 34.55999999l383.04000001 382.49142843q19.81714313 20.9142853 19.81714314 48.75428532zM1060.74751475 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.04 263.58857157q-20.9142853 19.81714313-48.75428531 19.81714312-19.26857155 0-31.61142843-7.47428531t-28.38857159-24.13714314l251.79428534-251.7942853q19.81714313-19.81714313 19.81714308-48.20571469 0-27.84000002-19.81714308-48.75428531l-383.04000001-382.49142845q-20.36571468-20.36571468-54.65142842-34.55999999t-62.67428532-14.19428534l120 0q28.38857157 0 62.67428532 14.19428534t54.65142842 34.55999999l383.03999998 382.49142845q19.81714313 20.9142853 19.81714314 48.75428531z" fill="currentColor"></path>
+</svg>
+        1
+      </div>
+    </div>
+  </div>
+</section>
+
+        
+
+          
+  <section class="widet-notice widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+    <div class="widget-title">
+      <svg class="icon icon-notice" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M512 945.02305225v28.15620663a24.27259221 24.27259221 0 0 1-24.27259221 24.27259335H394.0352a48.54518557 48.54518557 0 0 1-41.74885888-23.78714112l-110.68302222-184.47170332a132.04290333 132.04290333 0 0 1-17.47626667-48.54518557h118.4502511a200.97706667 200.97706667 0 0 1 76.21594113 14.56355556l20.38897777 133.49925888a48.54518557 48.54518557 0 0 0 36.40888888 27.67075555l16.01991111 2.91271112a24.27259221 24.27259221 0 0 1 20.38897778 25.72894889zM997.45185223 463.45481443a194.18074112 194.18074112 0 0 1-38.8361489 116.50844445 24.75804445 24.75804445 0 0 1-36.4088889 0l-34.95253333-34.95253333a24.27259221 24.27259221 0 0 1-2.91271111-30.58346667 97.09036999 97.09036999 0 0 0 0-106.79940665 24.27259221 24.27259221 0 0 1 2.91271111-30.58346666l34.95253333-34.95253334a24.75804445 24.75804445 0 0 1 18.93262223-7.28177777 26.2144 26.2144 0 0 1 17.47626667 9.70903665A194.18074112 194.18074112 0 0 1 997.45185223 463.45481443z m-194.18074112-388.36148111v776.72296335a48.54518557 48.54518557 0 0 1-48.54518556 48.54518443h-28.64165888a48.54518557 48.54518557 0 0 1-33.98163001-14.07810332l-145.63555556-143.20829668A291.27111111 291.27111111 0 0 0 342.57730333 657.63555556H172.18370333a145.63555556 145.63555556 0 0 1-145.63555556-145.63555556v-97.09036999a145.63555556 145.63555556 0 0 1 145.63555556-145.63555556h170.3936a291.27111111 291.27111111 0 0 0 206.31703779-85.43952668l145.63555555-143.20829554a48.54518557 48.54518557 0 0 1 33.98162888-14.07810446H754.72592555a48.54518557 48.54518557 0 0 1 48.54518556 48.54518555z" fill="currentColor"></path>
+</svg>
+        <span>NOTICE</span>
+    </div>
+    <div class="widget-body">
+      <div>
+        <p>
+          <b>本站各章节都是学习整理的成果,有需求请注明来源，有疑问请联系作者，谢谢</b>
+        </p>
+      </div>
+
+      <div>
+        <!-- 网站运行时间的设置 -->
+        <span id="timeDate">运行天数</span>
+        <span id="times">运行时分秒</span>
+        <script>
+          var now = new Date();
+          var current=new Date('2021-09-03');
+          function createtime() {
+            var grt = new Date(current);
+            now.setTime(now.getTime() + 250);
+            days = (now - grt) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+            hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+            if (String(hnum).length == 1) { hnum = "0" + hnum; } minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
+            mnum = Math.floor(minutes); if (String(mnum).length == 1) { mnum = "0" + mnum; }
+            seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+            snum = Math.round(seconds); if (String(snum).length == 1) { snum = "0" + snum; }
+            document.getElementById("timeDate").innerHTML = "本站已运行 " + dnum + " 天 ";
+            document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+          }
+          setInterval("createtime()", 250);
+        </script>
+      </div>
+    </div>
+  </section>
+  
+
+            <section class="widget-categorys widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M900.3614811 257.09082106h-339.81629553l-67.96326003-101.9448889c-19.41807444-29.12711113-48.54518557-43.69066667-82.52681443-43.69066667H123.6385189c-53.39970333 0-97.09036999 43.69066667-97.09037113 97.09036999v582.54222222c0 53.39970333 43.69066667 97.09036999 97.09037113 97.09037002h776.7229622c53.39970333 0 97.09036999-43.69066667 97.09037113-97.09037002V354.18119104c0-53.39970333-43.69066667-97.09036999-97.09037113-97.09036998z m-97.09036999 242.72592554H220.72888889c-24.27259221 0-48.54518557-24.27259221-48.54518556-48.54518556s24.27259221-48.54518557 48.54518556-48.54518444h582.54222222c24.27259221 0 48.54518557 24.27259221 48.54518556 48.54518444s-24.27259221 48.54518557-48.54518556 48.54518556z" fill="currentColor"></path>
+</svg>
+    <span>CATEGORYS</span>
+  </div>
+  <div class="widget-body">
+    <ul class="categorys-list">
+      
+    </ul>
+  </div>
+</section>
+
+              <section class="widget-tags widget-item  layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-tags" viewBox="0 0 1098 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M283.42180005 272q0-28.38857157-20.09142843-48.48000001t-48.47999998-20.09142842-48.48000002 20.09142842-20.09142846 48.48000001 20.09142846 48.48 48.48000002 20.09142843 48.47999998-20.09142843 20.09142843-48.48zM855.0332285 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.03999997 263.58857157q-20.9142853 19.81714313-48.75428534 19.81714312-28.38857157 0-48.20571468-19.81714312l-383.04-383.58857157q-20.36571468-19.81714313-34.55999999-54.10285688t-14.19428534-62.6742853l0-222.85714313q0-27.84000002 20.36571469-48.20571469t48.2057147-20.36571466l222.85714313 0q28.38857157 0 62.6742853 14.19428529t54.65142842 34.55999999l383.04000001 382.49142843q19.81714313 20.9142853 19.81714314 48.75428532zM1060.74751475 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.04 263.58857157q-20.9142853 19.81714313-48.75428531 19.81714312-19.26857155 0-31.61142843-7.47428531t-28.38857159-24.13714314l251.79428534-251.7942853q19.81714313-19.81714313 19.81714308-48.20571469 0-27.84000002-19.81714308-48.75428531l-383.04000001-382.49142845q-20.36571468-20.36571468-54.65142842-34.55999999t-62.67428532-14.19428534l120 0q28.38857157 0 62.67428532 14.19428534t54.65142842 34.55999999l383.03999998 382.49142845q19.81714313 20.9142853 19.81714314 48.75428531z" fill="currentColor"></path>
+</svg>
+    <span>TAGS</span>
+  </div>
+  <div class="widget-body">
+    <div class="tags-cloud">
+      <a href="/tags/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/" style="font-size: 10px;" class="tags-cloud-0">时间复杂度</a>
+    </div>
+  </div>
+</section>
+    </div>
+  </article>
+</div>
+
+<!-- 代码块 -->
+<!-- <script type="text/javascript" src="/js/codeBlockFuction.js"></script> -->
+<!-- 代码语言 -->
+<!-- <script type="text/javascript" src="/js/codeLang.js"></script> -->
+<!-- 代码块复制 -->
+<!-- <script type="text/javascript" src="/js/codeCopy.js"></script> -->
+<!-- <script type="text/javascript" src="/js/clipboard.min.js"></script> -->
+<!-- 代码块收缩 -->
+<!-- <script type="text/javascript" src="/js/codeShrink.js"></script>  -->
+<!-- 代码块折行 -->
+<!-- <style type="text/css">code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }</style> -->
+
+    <!-- footer container -->
+<footer id="footer" class="footer">
+  <div class="footer-container">
+    
+      <div class="social-icons">
+        
+          
+              
+          
+              
+          
+              
+          
+            <a href="https://github.com/cuk-yu/" class="soft-size--primary soft-style--box" target="_blank"
+              rel="noopener noreferrer">
+              <svg class="icon icon-github" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M64.6 512c0 195.6 125.4 361.9 300.1 422.9 23.5 5.9 19.9-10.8 19.9-22.2v-77.6c-135.8 15.9-141.3-74-150.5-89-18.5-31.5-61.9-39.5-49-54.5 31-15.9 62.5 4 98.9 58 26.4 39.1 77.9 32.5 104.1 26 5.7-23.5 17.9-44.5 34.7-60.9-140.7-25.2-199.4-111.1-199.4-213.3 0-49.5 16.4-95.1 48.4-131.8-20.4-60.6 1.9-112.4 4.9-120.1 58.2-5.2 118.5 41.6 123.3 45.3 33.1-8.9 70.8-13.7 112.9-13.7 42.4 0 80.3 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.4-43.9 2.9 7.7 24.7 58.3 5.5 118.1 32.5 36.8 49 82.8 49 132.4 0 102.3-59 188.3-200.2 213.2 23.5 23.3 38.1 55.5 38.1 91.1v112.7c0.8 9 0 17.9 15.1 17.9C832.7 877 960.4 709.4 960.4 512.1c0-247.5-200.6-447.9-447.9-447.9C265 64.1 64.6 264.5 64.6 512z"></path>
+</svg>
+            </a>
+            
+              
+          
+              
+      </div>
+      
+        <p>&copy; 2021 <a href="/" target="_blank">
+              Jane
+            </a>
+        </p>
+        <!-- id="busuanzi_container_site_pv" -->
+        <span>
+          本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        </span> | 
+        <!-- id="busuanzi_container_site_uv" -->
+        <span>
+          本站访客数<span id="busuanzi_value_site_uv"></span>人次
+        </span>
+        
+        
+
+            <p>Powered by <a href="https://hexo.io" target="_blank" rel="noopener noreferrer">Hexo</a> Theme - <a
+                href="https://github.com/miiiku/flex-block" target="_blank"
+                rel="noopener noreferrer author">flex-block</a>
+            </p>
+
+            <p>
+              <a href="javascript:;" id="theme-light">🌞 浅色</a>
+              <a href="javascript:;" id="theme-dark">🌛 深色</a>
+              <a href="javascript:;" id="theme-auto">🤖️ 自动</a>
+            </p>
   </div>
 </footer>
-    </div>
-    <nav id="mobile-nav">
+  </div>
+
+  <div class="back-to-top-fixed soft-size--round soft-style--box">
+    <svg class="icon icon-back-to-top" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <path d="M725.333333 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8l-213.333333-213.333333c-17.066667-17.066667-17.066667-42.666667 0-59.733333s42.666667-17.066667 59.733333 0l213.333333 213.333333c17.066667 17.066667 17.066667 42.666667 0 59.733333C746.666667 422.4 738.133333 426.666667 725.333333 426.666667z"></path>
+      <path d="M298.666667 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8-17.066667-17.066667-17.066667-42.666667 0-59.733333l213.333333-213.333333c17.066667-17.066667 42.666667-17.066667 59.733333 0s17.066667 42.666667 0 59.733333l-213.333333 213.333333C320 422.4 311.466667 426.666667 298.666667 426.666667z"></path>
+      <path d="M512 896c-25.6 0-42.666667-17.066667-42.666667-42.666667L469.333333 170.666667c0-25.6 17.066667-42.666667 42.666667-42.666667s42.666667 17.066667 42.666667 42.666667l0 682.666667C554.666667 878.933333 537.6 896 512 896z"></path>
+    </svg>
+  </div>
+
   
-</nav>
-    
+  <!-- aplayer -->
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
+<!-- dplayer -->
+
+
+
+
+  
+
+
+  
+
+
+  
 
 
 
 <script src="/js/script.js"></script>
 
 
-
-
-  </div>
+  
+  <!-- 尾部用户自定义相关内容 -->
+  
+  <!-- 页面点击小红心 -->
+  <script type="text/javascript" src="/js/mouseClickLove.js"></script>
+  <!-- 不蒜子 -->
+  <script type="text/javascript" src="/js/busuanzi.js"></script>
+  <!-- <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script> -->
 </body>
 </html>
