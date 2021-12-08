@@ -24,7 +24,7 @@
 
   
 
-  <title>Hello World | Jane</title>
+  <title>刷题，代码随想录 | Jane</title>
 
   
 
@@ -98,16 +98,18 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">Hello World</h1>
+          <h1 class="title-wrap">刷题，代码随想录</h1>
           <h2 class="title-sub-wrap">
             <strong>Jane</strong>
             <span>发布于</span>
-            <time  class="article-date" datetime="2021-11-12T02:46:58.047Z" itemprop="datePublished">2021-11-12</time>
+            <time  class="article-date" datetime="2021-12-05T09:49:40.000Z" itemprop="datePublished">2021-12-05</time>
           </h2>
           <ul class="wrap-list dark">
   
 </ul>
           <ul class="wrap-list dark">
+  
+    <li><a href="/tags/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/">🏷️ 时间复杂度</a></li>
   
 </ul>
         </div>
@@ -131,25 +133,30 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+        <h1 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h1><h2 id="时间复杂度定义"><a href="#时间复杂度定义" class="headerlink" title="时间复杂度定义"></a>时间复杂度定义</h2><h3 id="时间复杂度是一个函数，定性描述该算法的运行时间"><a href="#时间复杂度是一个函数，定性描述该算法的运行时间" class="headerlink" title="时间复杂度是一个函数，定性描述该算法的运行时间"></a>时间复杂度是一个函数，定性描述该算法的运行时间</h3><p>在软件开发中，时间复杂度作用：方便开发者估算出程序运行的答题时间。</p>
+<h4 id="如何估计程序的运行时间："><a href="#如何估计程序的运行时间：" class="headerlink" title="如何估计程序的运行时间："></a>如何估计程序的运行时间：</h4><p>通常会估算算法的操作单元数量来代表程序消耗的时间，这里默认CPU的每个单元运行消耗的时间都是相同的</p>
+<p>假设算法的问题规模为n,那么操作单元数量便用函数f(n)来表示,随着数据规模n的增大，算法执行时间的增长率和f(n)的增长率相同，称为算法的渐进时间复杂度，简称时间复杂度，记为O(f(n)).</p>
+<h2 id="什么是大O"><a href="#什么是大O" class="headerlink" title="什么是大O"></a>什么是大O</h2><h3 id="大O是用来表示上界的"><a href="#大O是用来表示上界的" class="headerlink" title="大O是用来表示上界的"></a>大O是用来表示上界的</h3><p>用它作为算法的最坏情况运行时间的上界，就是对任意数据输入的运行时间的上界</p>
+<h4 id="eg"><a href="#eg" class="headerlink" title="eg:"></a>eg:</h4><p>   插入排序的时间复杂度：O(n²)<br>输入数据的形式对于程序运算时间是有很大影响的，在数据本来有序的情况下时间复杂度是O(n)，但如果数据是逆序的话，插入排序的时间复杂度就是O(n²)，也就是对于所有输入情况来说，最坏是O(n²)的时间复杂度，所以称插入排序的时间复杂度是O(n²)。<br>   快速排序的时间复杂度：O(nlogn)<br>但是当数据已经有序的情况下，快速排序的时间复杂度是O(n²)，严格从O的定义上来讲，快速排序的时间复杂度应该是O（n²）</p>
+<p>但是在业内称快速排序的时间复杂度是O(nlogn),这里的O代表的就是一般情况，而不是严格的上界。如图：<br><img src="https://s2.loli.net/2021/12/06/9xvf2XDpl7B6RJK.png" alt="时间复杂度.PNG"></p>
+<p>主要关心的还是一般情况下的数据形式</p>
+<h5 id="面试中说到算法的时间复杂度是多少值得都是一般情况"><a href="#面试中说到算法的时间复杂度是多少值得都是一般情况" class="headerlink" title="面试中说到算法的时间复杂度是多少值得都是一般情况"></a>面试中说到算法的时间复杂度是多少值得都是一般情况</h5><p>但是如果面试官和我们深入的探讨一个算法的实现以及性能的时候，就要时刻想着</p>
+<h3 id="数据用例的不一样"><a href="#数据用例的不一样" class="headerlink" title="数据用例的不一样"></a>数据用例的不一样</h3><p>时间复杂度也是不同的，这一点一定要注意</p>
+<h1 id="不同数据规模的差异"><a href="#不同数据规模的差异" class="headerlink" title="不同数据规模的差异"></a>不同数据规模的差异</h1><p>如图可以看出不同算法的时间复杂度在不同数据输入规模下的差异<br><img src="https://s2.loli.net/2021/12/07/bBoUDd5jXwHOEa7.png" alt="捕获.PNG"></p>
+<h5 id="O-5n²-和-O-100n-两个时间复杂度，在数据规模为20之前，O-5n²-更优，也就是说随着数据规模的增大，开始最优的时间复杂度，不一定在数据规模增大后也是最优的时间复杂度"><a href="#O-5n²-和-O-100n-两个时间复杂度，在数据规模为20之前，O-5n²-更优，也就是说随着数据规模的增大，开始最优的时间复杂度，不一定在数据规模增大后也是最优的时间复杂度" class="headerlink" title="O(5n²) 和 O(100n) 两个时间复杂度，在数据规模为20之前，O(5n²)更优，也就是说随着数据规模的增大，开始最优的时间复杂度，不一定在数据规模增大后也是最优的时间复杂度"></a>O(5n²) 和 O(100n) 两个时间复杂度，在数据规模为20之前，O(5n²)更优，也就是说随着数据规模的增大，开始最优的时间复杂度，不一定在数据规模增大后也是最优的时间复杂度</h5><p>所以：<br>  在决定使用哪些算法的时候，不是时间复杂度越低的越好（因为简化后的时间复杂度忽略了常数项等等），要考虑数据规模，如果数据规模很小甚至可以用O(n²)的算法比O(n)更合适（在有常数项的时候）。</p>
+<h5 id="为什么在计算时间复杂度的时候要忽略常数项系数呢，也就是说O-100n-就是O-n-的复杂度，O-5n²-就是O-n²-的复杂度，而且要默认O-n-优于O-n²"><a href="#为什么在计算时间复杂度的时候要忽略常数项系数呢，也就是说O-100n-就是O-n-的复杂度，O-5n²-就是O-n²-的复杂度，而且要默认O-n-优于O-n²" class="headerlink" title="为什么在计算时间复杂度的时候要忽略常数项系数呢，也就是说O(100n)就是O(n)的复杂度，O(5n²)就是O(n²)的复杂度，而且要默认O(n)优于O(n²)"></a>为什么在计算时间复杂度的时候要忽略常数项系数呢，也就是说O(100n)就是O(n)的复杂度，O(5n²)就是O(n²)的复杂度，而且要默认O(n)优于O(n²)</h5><p>这就涉及到大O定义了：</p>
+<h5 id="因为大O就是数据量级突破一个点且数据量级非常大的情况下所表现出的时间复杂度，这个数据量也就是常数项系数已经不起决定性作用的数据量"><a href="#因为大O就是数据量级突破一个点且数据量级非常大的情况下所表现出的时间复杂度，这个数据量也就是常数项系数已经不起决定性作用的数据量" class="headerlink" title="因为大O就是数据量级突破一个点且数据量级非常大的情况下所表现出的时间复杂度，这个数据量也就是常数项系数已经不起决定性作用的数据量"></a>因为大O就是数据量级突破一个点且数据量级非常大的情况下所表现出的时间复杂度，这个数据量也就是常数项系数已经不起决定性作用的数据量</h5><p>eg：上图中20的那个点，n只要大于20常数项系数已经不起决定性作用了</p>
+<h3 id="所以常说的时间复杂度都是省略常数项系数的，是因为一般情况下都是默认数据规模足够的大，基于这样的事实，给出的算法时间复杂度的排序如下："><a href="#所以常说的时间复杂度都是省略常数项系数的，是因为一般情况下都是默认数据规模足够的大，基于这样的事实，给出的算法时间复杂度的排序如下：" class="headerlink" title="所以常说的时间复杂度都是省略常数项系数的，是因为一般情况下都是默认数据规模足够的大，基于这样的事实，给出的算法时间复杂度的排序如下："></a>所以常说的时间复杂度都是省略常数项系数的，是因为一般情况下都是默认数据规模足够的大，基于这样的事实，给出的算法时间复杂度的排序如下：</h3><h4 id="O-1-常数阶-lt-O-logn-对数阶-lt-O-n-线性阶-lt-O-n²-平方阶-lt-O-n³-立方阶-lt-O-2-n-指数阶"><a href="#O-1-常数阶-lt-O-logn-对数阶-lt-O-n-线性阶-lt-O-n²-平方阶-lt-O-n³-立方阶-lt-O-2-n-指数阶" class="headerlink" title="O(1)常数阶 &lt; O(logn)对数阶 &lt; O(n)线性阶 &lt; O(n²)平方阶 &lt; O(n³)立方阶 &lt; O(2^n)指数阶"></a>O(1)常数阶 &lt; O(logn)对数阶 &lt; O(n)线性阶 &lt; O(n²)平方阶 &lt; O(n³)立方阶 &lt; O(2^n)指数阶</h4><h6 id="但是也要注意大常数，例如10-7-10-9-那么常数就是不得不考虑的因素了"><a href="#但是也要注意大常数，例如10-7-10-9-那么常数就是不得不考虑的因素了" class="headerlink" title="但是也要注意大常数，例如10^7,10^9,那么常数就是不得不考虑的因素了"></a>但是也要注意大常数，例如10^7,10^9,那么常数就是不得不考虑的因素了</h6><h2 id="复杂表达式的化简"><a href="#复杂表达式的化简" class="headerlink" title="复杂表达式的化简"></a>复杂表达式的化简</h2><p>如何描述算法的时间复杂度是一个复杂表达时算法的时间复杂度<br>eg:<br>    O(2<em>n^2 + 10</em>n + 1000)<br>简化法：<br>1.去掉运行时间中的加法常数项(因为常数项并不会因为n的增大而增加计算机的操做次数)<br>    O(2<em>n^2 + 10</em>n)<br>2.去掉常数系数<br>    O(n^2 + n)<br>3.只保留最高项，去掉数量级小一级的n（因为n²的数据规模远大于n）<br>4.最终简化为：<br>    O(n^2)</p>
+<h2 id="O-logn-中log是以什么为底？"><a href="#O-logn-中log是以什么为底？" class="headerlink" title="O(logn)中log是以什么为底？"></a>O(logn)中log是以什么为底？</h2><p>底可以不同，为10、2、20等</p>
+<h4 id="此处说下忽略底数的描述"><a href="#此处说下忽略底数的描述" class="headerlink" title="此处说下忽略底数的描述"></a>此处说下忽略底数的描述</h4><p><img src="https://s2.loli.net/2021/12/07/OLmH4Gan3vwYpj7.png" alt="捕获.PNG"></p>
+<h5 id="以2为底n的对数-以2为底10的对数-以10为底n的对数"><a href="#以2为底n的对数-以2为底10的对数-以10为底n的对数" class="headerlink" title="以2为底n的对数 = 以2为底10的对数 * 以10为底n的对数"></a>以2为底n的对数 = 以2为底10的对数 * 以10为底n的对数</h5><p>忽略常数项在此处即可描述为忽略底数</p>
 
       </section>
 
       
       
         <nav class="article-nav">
+          
           
             <div class="article-nav-item layout-padding">
   <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
@@ -160,11 +167,10 @@
           <h2 class="card-text--title text-ellipsis">Leetcode 1 两数之和</h2>
         </a>
       
-      <div class="card-text--row">Newer</div>
+      <div class="card-text--row">Older</div>
     </div>
   </article>
 </div>
-          
           
         </nav>
       
