@@ -246,7 +246,7 @@
           
           <li class="menu-item menu-item-home">
     <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Accueil</a>
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home</a>
   </li>
         
         
@@ -280,7 +280,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />recherche</a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />Search</a>
         </li>
       
     </ul>
@@ -369,7 +369,7 @@
         
           
         
-        Um..! 3 articles au total. Et ca ne fait que commencer.
+        Um..! 3 posts in total. Keep on posting.
       </span>
       
 
@@ -508,7 +508,7 @@
                   <a href="/archives/%20%7C%7C%20archive">
                 
                     <span class="site-state-item-count">3</span>
-                    <span class="site-state-item-name">articles</span>
+                    <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
               
@@ -746,6 +746,28 @@
     <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
   
 
+
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+<script>
+  function addDarkmodeWidget() {
+    const options = {
+      bottom: '64px', // default: '32px'
+      right: '32px', // default: '32px'
+      left: 'unset', // default: 'unset'
+      time: '0.5s', // default: '0.3s'
+      mixColor: '#fff', // default: '#fff'
+      backgroundColor: '#fff',  // default: '#fff'
+      buttonColorDark: '#100f2c',  // default: '#100f2c'
+      buttonColorLight: '#fff', // default: '#fff'
+      saveInCookies: false, // default: true,
+      label: '🌓', // default: ''
+      autoMatchOsTheme: true // default: true
+    }
+    const darkmode = new Darkmode(options);
+    darkmode.showWidget();
+  }
+  window.addEventListener('load', addDarkmodeWidget);
+</script>
 
   
 

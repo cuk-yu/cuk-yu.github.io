@@ -248,7 +248,7 @@
           
           <li class="menu-item menu-item-home">
     <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Accueil</a>
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home</a>
   </li>
         
         
@@ -282,7 +282,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />recherche</a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />Search</a>
         </li>
       
     </ul>
@@ -389,14 +389,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posté le</span>
+                <span class="post-meta-item-text">Posted on</span>
               
 
               
                 
               
 
-              <time title="Post created: 2021-11-15 19:28:52" itemprop="dateCreated datePublished" datetime="2021-11-15T19:28:52+08:00">2021-11-15</time>
+              <time title="Created: 2021-11-15 19:28:52" itemprop="dateCreated datePublished" datetime="2021-11-15T19:28:52+08:00">2021-11-15</time>
             
 
             
@@ -413,7 +413,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Updated at: 2021-12-08 08:55:26" itemprop="dateModified" datetime="2021-12-08T08:55:26+08:00">2021-12-08</time>
+                <time title="Modified: 2021-12-08 08:55:26" itemprop="dateModified" datetime="2021-12-08T08:55:26+08:00">2021-12-08</time>
               
             
           </span>
@@ -639,7 +639,7 @@ nums 实参传递的是数组，数组是一串连续的存储空间 ， 子函�
                   <a href="/archives/%20%7C%7C%20archive">
                 
                     <span class="site-state-item-count">3</span>
-                    <span class="site-state-item-name">articles</span>
+                    <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
               
@@ -877,6 +877,28 @@ nums 实参传递的是数组，数组是一串连续的存储空间 ， 子函�
     <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
   
 
+
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+<script>
+  function addDarkmodeWidget() {
+    const options = {
+      bottom: '64px', // default: '32px'
+      right: '32px', // default: '32px'
+      left: 'unset', // default: 'unset'
+      time: '0.5s', // default: '0.3s'
+      mixColor: '#fff', // default: '#fff'
+      backgroundColor: '#fff',  // default: '#fff'
+      buttonColorDark: '#100f2c',  // default: '#100f2c'
+      buttonColorLight: '#fff', // default: '#fff'
+      saveInCookies: false, // default: true,
+      label: '🌓', // default: ''
+      autoMatchOsTheme: true // default: true
+    }
+    const darkmode = new Darkmode(options);
+    darkmode.showWidget();
+  }
+  window.addEventListener('load', addDarkmodeWidget);
+</script>
 
   
 
