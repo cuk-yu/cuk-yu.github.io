@@ -1225,10 +1225,14 @@
    <script type="text/javascript" src="/js/src/fireworks.js"></script>
 
 
-  <!-- 樱花特效 -->
-  
-      <script async src="/js/src/sakura.js"></script>
-  
+<!-- 雪花特效 -->
+<script type="text/javascript">
+  var windowWidth = $(window).width();
+  if (windowWidth > 480) {
+    document.write('<script type="text/javascript" src="/js/src/snow.js"><\/script>');
+  }
+</script>
+
 
 
 

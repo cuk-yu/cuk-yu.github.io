@@ -1,120 +1,86 @@
-window.addEventListener("DOMContentLoaded", function() {
-  const html            = document.querySelector("html");
-  const navBtn          = document.querySelector(".navbar-btn");
-  const navList         = document.querySelector(".navbar-list");
-  const backToTopFixed  = document.querySelector(".back-to-top-fixed");
-  let lastTop           = 0;
-  let theme             = window.localStorage.getItem('theme') || '';
-
-  theme && html.classList.add(theme)
-
-  const goScrollTop = () => {
-    let currentTop = getScrollTop()
-    let speed = Math.floor(-currentTop / 10)
-    if (currentTop > lastTop) {
-      return lastTop = 0
-    }
-    let distance = currentTop + speed;
-    lastTop = distance;
-    document.documentElement.scrollTop = distance;
-    distance > 0 && window.requestAnimationFrame(goScrollTop)
-  }
-
-  const toggleBackToTopBtn = (top) => {
-    top = top || getScrollTop()
-    if (top >= 100) {
-      backToTopFixed.classList.add("show")
-    } else {
-      backToTopFixed.classList.remove("show")
-    }
-  }
-
-  toggleBackToTopBtn()
-
-  // theme light click
-  document.querySelector('#theme-light').addEventListener('click', function () {
-    html.classList.remove('theme-dark')
-    html.classList.add('theme-light')
-    window.localStorage.setItem('theme', 'theme-light')
-  })
-
-  // theme dark click
-  document.querySelector('#theme-dark').addEventListener('click', function () {
-    html.classList.remove('theme-light')
-    html.classList.add('theme-dark')
-    window.localStorage.setItem('theme', 'theme-dark')
-  })
-
-  // theme auto click
-  document.querySelector('#theme-auto').addEventListener('click', function() {
-    html.classList.remove('theme-light')
-    html.classList.remove('theme-dark')
-    window.localStorage.setItem('theme', '')
-  })
-
-  // mobile nav click
-  navBtn.addEventListener("click", function () {
-    html.classList.toggle("show-mobile-nav");
-    this.classList.toggle("active");
+/*样式一*/
+(function($){
+  $.fn.snow = function(options){
+  var $flake = $('<div id="snowbox" />').css({'position': 'absolute','z-index':'9999', 'top': '-50px'}).html('&#10052;'),
+  documentHeight  = $(document).height(),
+  documentWidth = $(document).width(),
+  defaults = {
+    minSize   : 10,
+    maxSize   : 20,
+    newOn   : 1000,
+    flakeColor  : "#AFDAEF" /* 此处可以定义雪花颜色，若要白色可以改为#FFFFFF */
+  },
+  options = $.extend({}, defaults, options);
+  var interval= setInterval( function(){
+  var startPositionLeft = Math.random() * documentWidth - 100,
+  startOpacity = 0.5 + Math.random(),
+  sizeFlake = options.minSize + Math.random() * options.maxSize,
+  endPositionTop = documentHeight - 200,
+  endPositionLeft = startPositionLeft - 500 + Math.random() * 500,
+  durationFall = documentHeight * 10 + Math.random() * 5000;
+  $flake.clone().appendTo('body').css({
+    left: startPositionLeft,
+    opacity: startOpacity,
+    'font-size': sizeFlake,
+    color: options.flakeColor
+  }).animate({
+    top: endPositionTop,
+    left: endPositionLeft,
+    opacity: 0.2
+  },durationFall,'linear',function(){
+    $(this).remove()
   });
-
-  // mobile nav link click
-  navList.addEventListener("click", function (e) {
-    if (e.target.nodeName == "A" && html.classList.contains("show-mobile-nav")) {
-      navBtn.click()
-    }
-  })
-
-  // click back to top
-  backToTopFixed.addEventListener("click", function () {
-    lastTop = getScrollTop()
-    goScrollTop()
-  });
-
-  window.addEventListener("scroll", function () {
-    toggleBackToTopBtn()
-  }, { passive: true });
-
-  /** handle lazy bg iamge */
-  handleLazyBG();
+  }, options.newOn);
+    };
+})(jQuery);
+$(function(){
+    $.fn.snow({ 
+      minSize: 5, /* 定义雪花最小尺寸 */
+      maxSize: 50,/* 定义雪花最大尺寸 */
+      newOn: 300  /* 定义密集程度，数字越小越密集 */
+    });
 });
 
-/**
- * 获取当前滚动条距离顶部高度
- *
- * @returns 距离高度
- */
-function getScrollTop () {
-  return window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-}
+/*样式一*/
+(function($){
+  $.fn.snow = function(options){
+  var $flake = $('<div id="snowbox" />').css({'position': 'absolute','z-index':'9999', 'top': '-50px'}).html('&#10052;'),
+  documentHeight  = $(document).height(),
+  documentWidth = $(document).width(),
+  defaults = {
+    minSize   : 10,
+    maxSize   : 20,
+    newOn   : 1000,
+    flakeColor  : "#AFDAEF" /* 此处可以定义雪花颜色，若要白色可以改为#FFFFFF */
+  },
+  options = $.extend({}, defaults, options);
+  var interval= setInterval( function(){
+  var startPositionLeft = Math.random() * documentWidth - 100,
+  startOpacity = 0.5 + Math.random(),
+  sizeFlake = options.minSize + Math.random() * options.maxSize,
+  endPositionTop = documentHeight - 200,
+  endPositionLeft = startPositionLeft - 500 + Math.random() * 500,
+  durationFall = documentHeight * 10 + Math.random() * 5000;
+  $flake.clone().appendTo('body').css({
+    left: startPositionLeft,
+    opacity: startOpacity,
+    'font-size': sizeFlake,
+    color: options.flakeColor
+  }).animate({
+    top: endPositionTop,
+    left: endPositionLeft,
+    opacity: 0.2
+  },durationFall,'linear',function(){
+    $(this).remove()
+  });
+  }, options.newOn);
+    };
+})(jQuery);
+$(function(){
+    $.fn.snow({ 
+      minSize: 5, /* 定义雪花最小尺寸 */
+      maxSize: 50,/* 定义雪花最大尺寸 */
+      newOn: 300  /* 定义密集程度，数字越小越密集 */
+    });
+});
 
-function querySelectorArrs (selector) {
-  return Array.from(document.querySelectorAll(selector))
-}
-
-
-function handleLazyBG () {
-  const lazyBackgrounds = querySelectorArrs('[background-image-lazy]')
-  let lazyBackgroundsCount = lazyBackgrounds.length
-  if (lazyBackgroundsCount > 0) {
-    let lazyBackgroundObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function({ isIntersecting, target }) {
-        if (isIntersecting) {
-          let img = target.dataset.img
-          if (img) {
-            target.style.backgroundImage = `url(${img})`
-          }
-          lazyBackgroundObserver.unobserve(target)
-          lazyBackgroundsCount --
-        }
-        if (lazyBackgroundsCount <= 0) {
-          lazyBackgroundObserver.disconnect()
-        }
-      })
-    })
-
-    lazyBackgrounds.forEach(function(lazyBackground) {
-      lazyBackgroundObserver.observe(lazyBackground)
-    })
-  }
-}
